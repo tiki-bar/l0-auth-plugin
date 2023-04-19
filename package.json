@@ -1,5 +1,5 @@
 {
-  "name": "@mytiki/l0-index-plugin",
+  "name": "@mytiki/l0-auth-plugin",
   "version": "0.1.1",
   "description": "Plugin for easy client interfacing with the L0 Auth API",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tiki-bar/l0-index-plugin"
+    "url": "https://github.com/tiki-bar/l0-auth-plugin"
   },
   "keywords": [
     "TIKI",
@@ -32,9 +32,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tiki-bar/l0-index-plugin/issues"
+    "url": "https://github.com/tiki-bar/l0-auth-plugin/issues"
   },
-  "homepage": "https://github.com/tiki-bar/l0-index-plugin#readme",
+  "homepage": "https://github.com/tiki-bar/l0-auth-plugin#readme",
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
