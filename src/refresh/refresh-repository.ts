@@ -21,7 +21,7 @@ export class RefreshRepository {
         Accept: "application/json",
       },
       body: new URLSearchParams({
-        grant_type: "password",
+        grant_type: "refresh_token",
         refresh_token: refreshToken,
       }),
     }).catch((error) => {
