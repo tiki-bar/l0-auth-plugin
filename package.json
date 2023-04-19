@@ -9,7 +9,7 @@
     "build": "tsc --project tsconfig.build.json",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
-    "test": "jest --config jest.config.json",
+    "test": "jest --config jest.config.json --passWithNoTests",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
