@@ -71,10 +71,10 @@ export class L0Auth {
     this.apiKeyRepository.createKey(appId, isPublic, accessToken);
 
   getKeys = (appId: string, accessToken?: string): Promise<ApiKeyRsp[]> =>
-    this.getKeys(appId, accessToken);
+    this.apiKeyRepository.getKeys(appId, accessToken);
 
   deleteKey = (keyId: string, accessToken?: string): Promise<void> =>
-    this.deleteApp(keyId, accessToken);
+    this.apiKeyRepository.deleteKey(keyId, accessToken);
 
   refreshToken = (refreshToken: string): Promise<TokenRsp> =>
     this.refreshRepository.refresh(refreshToken);
