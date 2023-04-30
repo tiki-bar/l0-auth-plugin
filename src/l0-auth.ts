@@ -15,7 +15,6 @@ import { ApiKeyRsp } from "./api-key/api-key-rsp";
 import { ApiKeySecretRsp } from "./api-key/api-key-secret-rsp";
 import { OtpRsp } from "./otp/otp-rsp";
 import * as LocalStore from "./utils/local-store";
-import { UsageRepository, UsageRsp } from "./usage/usage-repository";
 
 export { L0AuthConfig };
 
@@ -26,7 +25,6 @@ export class L0Auth {
   refreshRepository: RefreshRepository;
   userRepository: UserRepository;
   apiKeyRepository: ApiKeyRepository;
-  usageRepository: UsageRepository;
 
   constructor(config: L0AuthConfig) {
     this.appRepository = new AppRepository(config.host);
@@ -35,7 +33,6 @@ export class L0Auth {
     this.refreshRepository = new RefreshRepository(config.host);
     this.userRepository = new UserRepository(config.host);
     this.apiKeyRepository = new ApiKeyRepository(config.host);
-    this.usageRepository = new UsageRepository(config.host);
   }
 
   createApp = (req: AppReqUpdate, accessToken?: string): Promise<AppRsp> =>
@@ -101,11 +98,4 @@ export class L0Auth {
       return Promise.reject(Error("Missing OtpRsp from local storage"));
     }
   }
-
-  getUsage = (
-    accessToken?: string,
-    month?: number,
-    year?: number
-  ): Promise<Array<UsageRsp>> =>
-    this.usageRepository.getUsage(accessToken, month, year);
 }
