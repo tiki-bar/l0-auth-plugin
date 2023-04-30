@@ -123,3 +123,6 @@ dist
 
 # IDEA
 .idea
+
+# Fuckin Macs
+.DS_Store

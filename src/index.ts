@@ -1,6 +1,6 @@
 /*
- * Copyright (c) TIKI Inc.
- * MIT license. See LICENSE file in root directory.
+ *  Copyright (c) TIKI Inc.
+ *  MIT license. See LICENSE file in root directory.
  */
 
 import { L0Auth, L0AuthConfig } from "./l0-auth";
@@ -11,6 +11,7 @@ import { TokenRsp } from "./utils/token-rsp";
 import { ApiKeyRsp, ApiKeySecretRsp } from "./api-key/api-key-repository";
 import { OtpRsp } from "./otp/otp-rsp";
 import { ErrorRsp } from "./utils/error-rsp";
+import { UsageRsp, UsageRspApp } from "./usage/usage-repository";
 
 export {
   L0Auth,
@@ -25,4 +26,6 @@ export {
   TokenRsp,
   OtpRsp,
   ErrorRsp,
+  UsageRsp,
+  UsageRspApp,
 };
