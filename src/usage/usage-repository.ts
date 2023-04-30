@@ -1,6 +1,6 @@
 /*
- *  Copyright (c) TIKI Inc.
- *  MIT license. See LICENSE file in root directory.
+ * Copyright (c) TIKI Inc.
+ * MIT license. See LICENSE file in root directory.
  */
 
 import { UsageRsp } from "./usage-rsp";
@@ -20,7 +20,7 @@ export class UsageRepository {
     accessToken?: string,
     month?: number,
     year?: number
-  ): Promise<UsageRsp> {
+  ): Promise<Array<UsageRsp>> {
     const now = new Date();
     if (month == null) month = now.getMonth();
     if (year == null) year = now.getFullYear();

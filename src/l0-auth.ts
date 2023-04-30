@@ -106,6 +106,6 @@ export class L0Auth {
     accessToken?: string,
     month?: number,
     year?: number
-  ): Promise<UsageRsp> =>
+  ): Promise<Array<UsageRsp>> =>
     this.usageRepository.getUsage(accessToken, month, year);
 }
